@@ -31,7 +31,7 @@ const email = document.querySelector('input');
 populateTextarea()
 
 function populateTextarea() {
-    const saveMessage = localStorage.getItem('feedback-form-state');
+    const saveMessage = JSON.parse(localStorage.getItem('feedback-form-state'));
     if (saveMessage) {
         textarea.value = saveMessage.message;
         email.value = saveMessage.email;
