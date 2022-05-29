@@ -19,9 +19,10 @@ function onTextareaData(e) {
 function onFormSubmit(e) {
     e.preventDefault();
     // console.log('send message')
+    console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
     e.currentTarget.reset();
-    localStorage.removeItem('feedback-form-state')
-    console.log(JSON.parse(localStorage.getItem('feedback-form-state')))
+    localStorage.removeItem('feedback-form-state');
+    
 
 }
 
