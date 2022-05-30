@@ -17,7 +17,7 @@ function createGalleryItemsMarkup(galleryItems) {
     return galleryItems
         .map(({ preview, original, description }) => {
         return `
-    <li class="gallery__li">
+    <div class="gallery__li">
     <a class="gallery__item" href="${original}">
         <img
             class="gallery__image"
@@ -25,7 +25,7 @@ function createGalleryItemsMarkup(galleryItems) {
             alt="${description}"
         />
     </a>
-    </li>
+    </div>
     `;
     }).join('');
 }
